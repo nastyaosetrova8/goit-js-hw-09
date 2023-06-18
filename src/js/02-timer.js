@@ -25,9 +25,9 @@ const options = {
       Notiflix.Notify.failure('Please choose a date in the future!');
     } else {
       elements.startBtn.disabled = false;
+      elements.startBtn.addEventListener('click', handlerClickStart);
     }
 
-    elements.startBtn.addEventListener('click', handlerClickStart);
     function handlerClickStart() {
       let intervalId = setInterval(() => {
         elements.startBtn.disabled = true;
